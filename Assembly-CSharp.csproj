@@ -147,6 +147,7 @@
     <Compile Include="Assets\Scripts\topics\pub\RobotCamera_pub.cs" />
     <Compile Include="Assets\Scripts\topics\pub\RoomScores_pub.cs" />
     <Compile Include="Assets\Scripts\topics\sub\Amcl_pose_sub.cs" />
+    <Compile Include="Assets\Scripts\topics\sub\FOVcontrol_sub.cs" />
     <Compile Include="Assets\Scripts\topics\sub\Map_sub.cs" />
     <Compile Include="Assets\Scripts\topics\sub\Semantic_mapping_sub.cs" />
     <Compile Include="Assets\Scripts\topics\sub\Tf_sub.cs" />

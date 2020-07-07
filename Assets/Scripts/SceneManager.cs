@@ -23,7 +23,7 @@ public class SceneManager : MonoBehaviour
         var ros = robot.GetComponent<ROS>();
         ros.SetIP(TxIp.text);
         ros._pubPackages = new List<string>() { "RobotCamera_pub" };
-        ros._subPackages = new List<string>() { "Tf_sub" };
+        ros._subPackages = new List<string>() { "Tf_sub", "FOVcontrol_sub" };
 
         ros.Connect();
     }

@@ -191,6 +191,7 @@ MonoBehaviour:
   _debug: 0
   _subPackages:
   - Tf_sub
+  - FOVcontrol_sub
   _pubPackages:
   - RobotCamera_pub
 --- !u!114 &6625737936006673325
@@ -209,7 +210,7 @@ MonoBehaviour:
   _frecuency: 0.0333
   _ros: {fileID: 0}
   _size: {x: 480, y: 320}
-  _fieldOfView: 60
+  _fieldOfViewInicial: 60.5
 --- !u!1 &7182491253245315172
 GameObject:
   m_ObjectHideFlags: 0

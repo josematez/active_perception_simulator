@@ -13,7 +13,7 @@ public class CameraRGBDSensor : MonoBehaviour
     public float _frecuency = 1;
     public ROS _ros;
     public Vector2Int _size;
-    public float _fieldOfView = 60;
+    public float _fieldOfViewInicial = 60;
 
     private Camera[] _cameras;
     private Rect rect;
@@ -23,7 +23,7 @@ public class CameraRGBDSensor : MonoBehaviour
     {
         _cameras = GetComponentsInChildren<Camera>();
         _ros = GetComponent<ROS>();
-        foreach (Camera c in _cameras) { c.fieldOfView = _fieldOfView; }
+        foreach (Camera c in _cameras) { c.fieldOfView = _fieldOfViewInicial; }
         rect = new Rect(0, 0, _size.x, _size.y);
     }
 
@@ -43,6 +43,14 @@ public class CameraRGBDSensor : MonoBehaviour
         }
     }
 
+    #endregion
+
+    #region Public Functions
+    public void ChangeFoV(float fieldOfView)
+    {
+        Debug.Log(fieldOfView);
+        foreach (Camera c in _cameras) { c.fieldOfView = (fieldOfView / (float)10.0); }
+    }
     #endregion
 
     #region Private Functions
